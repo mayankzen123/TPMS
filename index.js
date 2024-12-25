@@ -20,6 +20,10 @@ app.get('/server-info', (req, res) => {
     res.json(serverInfo);
 });
 
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
+
 // Serve the HTML file
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
