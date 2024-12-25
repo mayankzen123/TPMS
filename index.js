@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 18018;
 
 // Middleware
 app.use(bodyParser.json());
@@ -20,10 +20,6 @@ app.get('/server-info', (req, res) => {
     res.json(serverInfo);
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
-
 // Serve the HTML file
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
@@ -39,7 +35,7 @@ app.post('/', (req, res) => {
 });
 
 // Start server
-app.listen(port, '0.0.0.0', () => {
+app.listen(port, , () => {
     console.log(`Server is running on port ${port}`);
     console.log(`Local: http://localhost:${port}`);
     console.log(`On Your Network: http://${getIPAddress()}:${port}`);
