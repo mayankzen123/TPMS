@@ -35,7 +35,7 @@ app.post('/', (req, res) => {
 });
 
 // Start server
-app.listen(port, , () => {
+app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
     console.log(`Local: http://localhost:${port}`);
     console.log(`On Your Network: http://${getIPAddress()}:${port}`);
