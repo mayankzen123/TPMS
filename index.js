@@ -6,7 +6,7 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 
 const app = express();
-const port = process.env.PORT || 18018;
+const port = process.env.PORT || 10000;
 
 // Security middleware
 app.use(helmet({
